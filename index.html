@@ -14,34 +14,29 @@
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
       <div class="container-fluid">
         <!-- nav logo  -->
-        <a class="navbar-brand p-3 border" href="#">
+        <a
+          class="navbar-brand p-3 border"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#demo"
+          href="#">
           <img
             src="assets/image/ort-logo.png"
             alt="company Logo"
             style="width: 40px"
             class="rounded-pill"/>
         </a>
-        <!-- navbar toggle button  -->
-        <!-- <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
+        <!-- open offcanvas button  -->
         <button
-        class="btn btn-primary"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#demo">
-        <img src="assets/image/logo/bx-grid-alt.svg" alt="">
-      </button>
+          class="btn btn-primary d-sm-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#demo">
+          <img src="assets/image/logo/bx-grid-alt.svg" alt="" />
+        </button>
         <div
           class="collapse navbar-collapse justify-content-end"
-          id="navbarNav">
+          id="navbarNav"
+        >
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">Home</a>
@@ -60,70 +55,102 @@
             </li>
           </ul>
         </div>
-
-        <!-- <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul>
-      </div> -->
       </div>
     </nav>
     <!-- navbar end  -->
-
+<!-- mobile navigation start  -->
     <div class="offcanvas offcanvas-start" id="demo">
       <div class="offcanvas-header">
-        <a class="navbar-brand p-3 border" href="#">
+        <a class="navbar-brand p-3 border" href="#" data-bs-dismiss="offcanvas">
           <img
             src="assets/image/ort-logo.png"
             alt="company Logo"
             style="width: 40px"
-            class="rounded-pill"/>
+            class="rounded-pill"
+          />
         </a>
+        <!-- mobile nav close button  -->
         <button
           type="button"
           class="btn-close"
-          data-bs-dismiss="offcanvas"></button>
+          data-bs-dismiss="offcanvas"
+        ></button>
       </div>
       <div class="offcanvas-body">
-        <div>
-          <a href="index.html" class="link-primary">Primary link</a> <br /><br />
-          <a href="#" class="link-secondary">Secondary link</a>
-          <a href="#" class="link-success">Success link</a>
-          <a href="#" class="link-danger">Danger link</a>
-          <a href="#" class="link-warning">Warning link</a>
-          <a href="#" class="link-info">Info link</a>
-          <a href="#" class="link-light">Light link</a>
-          <a href="#" class="link-dark">Dark link</a>
+        <div class="list-group-flush">
+          <button
+            type="button"
+            class="list-group-item list-group-item-action first-color"
+            aria-current="true"
+          >
+            Home
+          </button>
+          <button type="button" class="list-group-item list-group-item-action first-color">
+            about
+          </button>
+          
+
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button
+                  class="accordion-button collapsed first-color"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne"
+                  aria-expanded="false"
+                  aria-controls="flush-collapseOne" >
+                  services
+                </button>
+              </h2>
+              <div
+                id="flush-collapseOne"
+                class="accordion-collapse collapse"
+                aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <ul class="list-group">
+                    <li class="list-group-item first-color"><a href="#">this is link</a></li>
+                    <li class="list-group-item first-color">A second item</li>
+                    <li class="list-group-item first-color">A third item</li>
+                    <li class="list-group-item first-color">A fourth item</li>
+                    <li class="list-group-item first-color">And a fifth one</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="bg-danger border-2 border-top border-danger">
+
+          <button type="button" class="list-group-item list-group-item-action first-color">
+            careers
+          </button>
+          <button
+            type="button"
+            class="list-group-item list-group-item-action"
+            disabled>
+            <div class="first-color"> disabled</div>
+           
+          </button>
         </div>
       </div>
     </div>
-
-    <div class="container-fluid mt-3">
-      <h3>Offcanvas Sidebar</h3>
-      <p>
-        Offcanvas is similar to modals, except that it is often used as a
-        sidebar.
-      </p>
-      <button
-        class="btn btn-primary"
-        type="button"
-        data-bs-toggle="offcanvas"
-        data-bs-target="#demo">
-        Open Offcanvas Sidebar
-      </button>
-    </div>
-
+    <form action="#">
+      <div class="mb-3 mt-3">
+        <label for="email" class="form-label">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+      </div>
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Password:</label>
+        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+      </div>
+      <div class="form-check mb-3">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
     <!-- bootstrap javascript -->
     <script src="assets/js/bootstrap.bundle.min.js"></script>
   </body>

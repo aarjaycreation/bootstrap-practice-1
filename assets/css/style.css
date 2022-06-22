@@ -6,3 +6,75 @@
 |     |_  _____| | _____| |
 |_______||_______||_______|
 */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  /* color */
+  --aarjay-color: 213;
+  --first-color: hsl(var(--aarjay-color), 86%, 56%);
+  --first-color: hsl(var(--aarjay-color), 86%, 56%);
+  --first-color-lighter: hsl(var(--aarjay-color), 92%, 85%);
+  --first-color-second: hsl(var(--aarjay-color), 86%, 56%);
+  --first-color-alt: hsl(var(--aarjay), 16%, 12%);
+  --first-color: hsl(var(--aarjay-color), 69%, 61%);
+  --first-color-up: hsl(var(--aarjay-color), 57%, 53%);
+  --body-color: hsl(var(--aarjay-color), 60%, 99%);
+
+  --scroll-bar-color: hsl(var(--aarjay-color), 12%, 90%);
+  --scroll-bar-color: RED;
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --small-font-size: 0.813rem;
+  --paragraph-font-size: 0.75rem;
+  --font-semi-bold: 600;
+  --font-medium: 500;
+  --title-color: hsl(var(--aarjay-color), 8%, 15%);
+  --text-color: hsl(var(--aarjay-color), 8%, 10%);
+  /* Margin */
+  --mb-0-25: 0.25rem;
+  --mb-0-75: 0.75rem;
+  --mb-0-5: 0.5rem;
+  --mb-3: 3rem;
+  --mb-2: 2rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  /*========== z index ==========*/
+  --z-modal: 1000;
+}
+
+.first-color {
+  color: var(--first-color);
+  text-transform: uppercase;
+}
+.first-color-lighter {
+  color: var(--first-color-lighter);
+}
+
+.first-color-second {
+  color: var(--first-color-second);
+}
+.first-color-alt {
+  color: var(--first-color-alt);
+}
+.first-color-up {
+  color: var(--first-color-up);
+}
+.body-color {
+  color: var(--body-color);
+}
+
+.carousel .item {
+  height: 500px;
+}
+
+.item img {
+    position: absolute;
+    object-fit:cover;
+    top: 0;
+    left: 0;
+    min-height: 500px;
+}
+
